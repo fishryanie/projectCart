@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+           .capacity{display: grid; grid-template-columns: 1fr 1fr 1fr; margin: 10px 0px;}
+            .capacity div {padding: 10px 30px 0px 30px; background: rgba(0,0,0,0.5); color:#fff; text-align: center;}
+            .capacity input {margin: 0px 5px;}
+    </style>
+</head>
   <body>
     <section class="container">
         <section class="d-flex justify-content-between">
@@ -33,10 +38,26 @@
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                            <div class="d-flex justify-content-center">
-                                <button class="btn btn-secondary px-5 mx-3" id='btn256'>256GB <br> 31.999.000đ</button>
-                                <button class="btn btn-outline-secondary px-5 mx-3">128GB <br> 30.999.000đ</button>
+                          <div class="px-5">
+                            <div class="capacity">
+                                <div style="border-radius: 20px 0px 0px 20px;">
+                                    <input type="radio" id="64gb" name = "capacity">
+                                    <span>64GB</span>
+                                    <p>29.490.000đ</p>
+                                </div>
+                                <div class="">
+                                    <input type="radio" id="128gb" name = "capacity">
+                                    <span>128GB</span>
+                                    <p>30.490.000đ</p>
+                                </div>
+                                <div style="border-radius: 0px 20px 20px 0px;">
+                                    <input type="radio" id="256gb" name = "capacity" >
+                                    <span>256GB</span>
+                                    <p>31.990.000đ</p>
+                                </div>
                             </div>
+                          </div>
+
                             <div class="mt-3">
                                 <h4>Thông Tin Sản Phẩm</h4>
                                 <table class="table table-hover">
@@ -105,9 +126,34 @@
 
     <script>
         getId = (id) => document.getElementById(id)
+        QSA = (id) => document.querySelectorAll(id)
+        
         getId('img1').onclick=()=> { getId('img').innerHTML = `<img src="../ASSETS/IMG//11_Series/11/11-red.jpg" width="100%" alt="">`}
         getId('img2').onclick=()=> { getId('img').innerHTML = `<img src="../ASSETS/IMG//11_Series/11/11-mint.jpg" width="100%" alt="">`}
         getId('img3').onclick=()=> { getId('img').innerHTML = `<img src="../ASSETS/IMG//11_Series/11/11-black.jpg" width="100%" alt="">`}
+
+
+// ====================== Chọn dung lượng ================================>
+getId("64gb").onclick =()=> {
+    QSA(".capacity div")[0].style.cssText = "background: rgba(0,0,0,0.7); border-radius: 20px 0px 0px 20px;";
+    QSA(".capacity div")[1].style.cssText = "background: rgba(0,0,0,0.5);";
+    QSA(".capacity div")[2].style.cssText = "background: rgba(0,0,0,0.5); border-radius: 0px 20px 20px 0px;";
+    getId("price").innerHTML = "21.490.000đ"
+}
+
+getId("128gb").onclick =()=> {
+    QSA(".capacity div")[1].style.cssText = "background: rgba(0,0,0,0.7);";
+    QSA(".capacity div")[0].style.cssText = "background: rgba(0,0,0,0.5); border-radius: 20px 0px 0px 20px;";
+    QSA(".capacity div")[2].style.cssText = "background: rgba(0,0,0,0.5); border-radius: 0px 20px 20px 0px;";
+    getId("price").innerHTML = "23.490.000đ"
+}
+getId("256gb").onclick =()=> {
+    QSA(".capacity div")[2].style.cssText = "background: rgba(0,0,0,0.7); border-radius: 0px 20px 20px 0px;";
+    QSA(".capacity div")[0].style.cssText = "background: rgba(0,0,0,0.5); border-radius: 20px 0px 0px 20px;";
+    QSA(".capacity div")[1].style.cssText = "background: rgba(0,0,0,0.5);";
+    getId("price").innerHTML = "24.990.000đ"
+}
+
     </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
