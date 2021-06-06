@@ -1,0 +1,219 @@
+/**
+* Landing Page Variables
+*/
+/**
+* Let's set Parent Element position is "relative" before using
+*/
+.container {
+  position: relative;
+  top: 3.75rem;
+  left: 0;
+  width: 100%;
+  height: 37rem;
+  background: white;
+}
+.container-wrapper {
+  width: 25rem;
+  height: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  background: white;
+}
+.container-wrapper-title {
+  width: 100%;
+  height: 5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container-wrapper-title strong {
+  font-size: 2.8rem;
+  line-height: 5rem;
+  color: black;
+}
+.container-wrapper-form {
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.container-wrapper-form-username, .container-wrapper-form-password {
+  width: 100%;
+  height: 34%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-wrapper-form-username-top, .container-wrapper-form-password-top {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+.container-wrapper-form-username-top span, .container-wrapper-form-password-top span {
+  color: #313639;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  pointer-events: none;
+  position: absolute;
+  transition: 0.15s ease;
+}
+.container-wrapper-form-username-top span.active, .container-wrapper-form-password-top span.active {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.container-wrapper-form-username-top input, .container-wrapper-form-password-top input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border: 1px solid black;
+  border: none;
+  background: transparent;
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  padding-top: 1.4rem;
+  border-radius: 0.8rem;
+  border: 1px solid #989699;
+  transition: 0.15s ease;
+}
+.container-wrapper-form-username-top input:focus, .container-wrapper-form-password-top input:focus {
+  box-shadow: 1px 1px 10px #1595eb;
+  border: 1px solid #1595eb;
+}
+.container-wrapper-form-username-bot, .container-wrapper-form-password-bot {
+  width: 100%;
+  height: 30%;
+}
+.container-wrapper-form-username-bot span, .container-wrapper-form-password-bot span {
+  pointer-events: none;
+  font-size: 0.9rem;
+  padding-left: 2rem;
+  line-height: 200%;
+  color: red;
+  font-weight: 450;
+}
+.container-wrapper-form-submit {
+  width: 100%;
+  height: 23%;
+}
+.container-wrapper-form-submit button {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  background: #057ca0;
+  color: white;
+  opacity: 0.9;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container-wrapper-form-submit button:hover {
+  opacity: 1;
+  background: #009e89;
+}
+.container-wrapper-moreOption {
+  width: 100%;
+  height: 3.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-wrapper-moreOption a {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+  color: black;
+  font-size: 1.05rem;
+  color: #057ca0;
+  font-weight: 420;
+}
+.container-wrapper-moreOption a:hover {
+  color: #1595eb;
+}
+.container-wrapper-moreOption a:nth-child(2):hover {
+  color: #e20d66;
+}
+
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 50rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 65rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 48rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 33rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 18px;
+  }
+
+  .container {
+    height: 38rem;
+  }
+  .container-wrapper {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 16px;
+  }
+
+  .container {
+    height: 38rem;
+  }
+  .container-wrapper {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  * {
+    font-size: 14px;
+  }
+
+  .container {
+    height: 38rem;
+  }
+  .container-wrapper {
+    width: 20rem;
+  }
+}
+
+/*# sourceMappingURL=Login.css.map */

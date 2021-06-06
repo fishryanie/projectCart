@@ -1,0 +1,206 @@
+@import "Variables.scss";
+@import "Color.scss";
+@import "Mixin.scss";
+
+.container {
+  position: relative;
+  top: $header-height;
+  left: 0;
+  width: 100%;
+  height: 37rem;
+  background: white;
+  &-wrapper {
+    @include setSize(25rem, 30rem);
+    @include absolutely_Center();
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    background: white;
+    &-title {
+      @include setSize(100%, 5rem);
+      text-align: center;
+      margin-bottom: 1rem;
+      strong {
+        font-size: 2.8rem;
+        line-height: 5rem;
+        color: black;
+      }
+    }
+    &-form {
+      @include setSize(100%, 18rem);
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      &-username,
+      &-password {
+        @include setSize(100%, 34%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-top {
+          position: relative;
+          @include setSize(100%, 70%);
+          span {
+            color: $vest-gray;
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            margin-left: 2rem;
+            pointer-events: none;
+            position: absolute;
+            transition: 0.15s ease;
+            &.active {
+              font-size: 0.9rem;
+              margin-top: 0.5rem;
+            }
+          }
+          input {
+            @include setSize();
+            @include reset_Input_Text();
+            border: none;
+            background: transparent;
+            padding-left: 2rem;
+            font-size: 1.2rem;
+            padding-top: 1.4rem;
+            border-radius: 0.8rem;
+            border: 1px solid $leaf-gray;
+            transition: 0.15s ease;
+            &:focus {
+              box-shadow: 1px 1px 10px $sky-blue;
+              border: 1px solid $sky-blue;
+            }
+          }
+        }
+        &-bot {
+          @include setSize(100%, 30%);
+          span {
+            pointer-events: none;
+            font-size: 0.9rem;
+            padding-left: 2rem;
+            line-height: 200%;
+            color: red;
+            font-weight: 450;
+          }
+        }
+      }
+      &-submit {
+        @include setSize(100%, 23%);
+        button {
+          text-align: center;
+          @include setSize();
+          font-size: 1.3rem;
+          border: none;
+          outline: none;
+          background: $light-blue;
+          color: white;
+          opacity: 0.9;
+          border-radius: 1rem;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            opacity: 1;
+            background: $cadet-blue;
+          }
+        }
+      }
+    }
+    &-moreOption {
+      @include setSize(100%, 3.3rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        @include reset_A_Tag();
+        font-size: 1.05rem;
+        color: $light-blue;
+        font-weight: 420;
+        &:hover {
+          color: $sky-blue;
+        }
+        &:nth-child(2) {
+          &:hover {
+            color: $apple-pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 50rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 65rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 48rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 20px;
+  }
+
+  .container {
+    height: 33rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 18px;
+  }
+
+  .container {
+    height: 38rem;
+    &-wrapper {
+      width: 20rem;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  * {
+    font-size: 16px;
+  }
+
+  .container {
+    height: 38rem;
+    &-wrapper {
+      width: 20rem;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  * {
+    font-size: 14px;
+  }
+
+  .container {
+    height: 38rem;
+    &-wrapper {
+      width: 20rem;
+    }
+  }
+}
